@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;800;900&display=swap");
 
 :root {
   --color-primary: #A68A65;
@@ -13,20 +14,26 @@
   --color-text: #353A45;
   --color-white: #FFFFFF;
 
+  /*
+    Avenir remains first in case it exists on the system.
+    Mulish is our consistent web fallback because it is
+    much closer to the supplied Figma typography than
+    the Windows system font.
+  */
   --font-primary:
     "Avenir",
     "Avenir Next",
+    "Mulish",
     system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
     sans-serif;
 
   --font-size-heading-1: 5.5rem;
   --font-size-heading-1-mobile: 2.75rem;
+
   --font-size-heading-2: 2.875rem;
   --font-size-heading-3: 1.75rem;
   --font-size-heading-4: 1.25rem;
+
   --font-size-body-large: 1.25rem;
   --font-size-body: 1rem;
   --font-size-body-small: 0.75rem;
@@ -39,24 +46,34 @@
 }
 
 html {
+  width: 100%;
+
   font-family: var(--font-primary);
+
   color: var(--color-text);
   background: var(--color-white);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  width: 100%;
   min-width: 320px;
   min-height: 100svh;
+
   margin: 0;
+
+  color: var(--color-text);
+  background: var(--color-white);
+
+  font-family: var(--font-primary);
   font-size: var(--font-size-body);
   font-weight: 300;
   line-height: 1.4;
-  color: var(--color-text);
-  background: var(--color-white);
 }
 
 button,
@@ -64,6 +81,10 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  color: inherit;
 }
 
 img,
@@ -82,32 +103,13 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+dl,
+dd {
   margin: 0;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: var(--font-size-heading-1-mobile);
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: var(--font-size-heading-1);
-  }
-}
-
-.app-shell {
+#root {
+  width: 100%;
   min-height: 100svh;
-  padding: 48px 20px;
-}
-
-.app-shell h1 {
-  margin-bottom: 12px;
 }

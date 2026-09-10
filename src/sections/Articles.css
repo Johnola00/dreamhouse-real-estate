@@ -1,0 +1,1326 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600;700&display=swap");
+
+/* =================================================
+   ARTICLES & TIPS
+================================================= */
+
+.articles {
+  --articles-font:
+    "Avenir",
+    "Avenir Next",
+    "Mulish",
+    sans-serif;
+
+  --articles-gutter: 120px;
+
+  width: 100%;
+  height: 800px;
+
+  overflow: hidden;
+
+  background: var(--color-white);
+}
+
+.articles__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 800px;
+
+  margin: 0 auto;
+}
+
+/* =================================================
+   HEADER
+================================================= */
+
+.articles__header {
+  position: absolute;
+
+  top: 120px;
+  left: var(--articles-gutter);
+
+  width: 733px;
+}
+
+.articles__heading-row {
+  display: block;
+}
+
+/* =================================================
+   HEADING
+================================================= */
+
+.articles__heading {
+  width: 459px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--articles-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* =================================================
+   MOBILE / TABLET FILTER ELEMENTS
+   HIDDEN BY DEFAULT
+================================================= */
+
+.articles__mobile-filter,
+.articles__mobile-filters,
+.articles__read-more {
+  display: none;
+}
+
+/* =================================================
+   INTRO
+================================================= */
+
+.articles__intro {
+  width: 733px;
+
+  margin: 30px 0 0;
+
+  color: var(--color-text);
+
+  font-family: var(--articles-font);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   DESKTOP TOOLBAR
+================================================= */
+
+.articles__toolbar {
+  position: absolute;
+
+  top: 319px;
+  left: var(--articles-gutter);
+  right: var(--articles-gutter);
+
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =================================================
+   CATEGORY PILLS
+================================================= */
+
+.articles__categories {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.articles__category {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  border: 1px solid var(--color-gray);
+  border-radius: 32px;
+
+  color: var(--color-gray-dark);
+
+  background: transparent;
+
+  font-family: var(--articles-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.articles__category--active {
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+
+  background: var(--color-beige);
+}
+
+.articles__category:hover {
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+}
+
+.articles__category:focus-visible {
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 3px;
+}
+
+/* =================================================
+   DESKTOP NAVIGATION
+================================================= */
+
+.articles__navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.articles__nav-button {
+  width: 60px;
+  height: 60px;
+
+  flex: 0 0 60px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-gray);
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.articles__nav-button span {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.articles__nav-button:hover:not(:disabled) {
+  border-color: var(--color-primary);
+
+  background: var(--color-beige);
+
+  transform: translateY(-2px);
+}
+
+.articles__nav-button:disabled {
+  opacity: 0.4;
+
+  cursor: default;
+}
+
+.articles__nav-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 4px;
+}
+
+/* =================================================
+   DESKTOP VIEWPORT
+================================================= */
+
+.articles__viewport {
+  position: absolute;
+
+  top: 409px;
+  left: 0;
+
+  width: 100%;
+  height: 367px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  overscroll-behavior-x: contain;
+}
+
+.articles__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   TRACK
+================================================= */
+
+.articles__track {
+  width: max-content;
+  height: 367px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-left: var(--articles-gutter);
+  padding-right: var(--articles-gutter);
+}
+
+/* =================================================
+   ARTICLE CARD
+================================================= */
+
+.article-card {
+  width: 387px;
+  height: 367px;
+
+  flex: 0 0 387px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =================================================
+   ARTICLE VISUAL
+================================================= */
+
+.article-card__visual {
+  position: relative;
+
+  width: 387px;
+  height: 194px;
+
+  flex: 0 0 194px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: var(--color-text);
+}
+
+.article-card__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 500ms ease;
+}
+
+.article-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(53, 58, 69, 0.12) 0%,
+      rgba(53, 58, 69, 0.08) 45%,
+      rgba(53, 58, 69, 0.58) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* =================================================
+   ARTICLE TITLE
+================================================= */
+
+.article-card__title {
+  position: absolute;
+  z-index: 2;
+
+  top: 30px;
+  left: 30px;
+
+  width: 327px;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--articles-font);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+}
+
+/* =================================================
+   META
+================================================= */
+
+.article-card__meta {
+  position: absolute;
+  z-index: 2;
+
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.article-card__category,
+.article-card__date {
+  color: var(--color-white);
+
+  font-family: var(--articles-font);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   BODY
+================================================= */
+
+.article-card__body {
+  width: 100%;
+
+  padding-top: 30px;
+}
+
+.article-card__description {
+  width: 100%;
+  height: 67px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: var(--color-text);
+
+  font-family: var(--articles-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* =================================================
+   READ LINK
+================================================= */
+
+.article-card__read {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+  padding: 0;
+
+  border: 0;
+
+  color: var(--color-primary);
+
+  background: transparent;
+
+  font-family: var(--articles-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+
+  transition:
+    gap 180ms ease,
+    opacity 180ms ease;
+}
+
+.article-card__read:hover {
+  gap: 12px;
+
+  opacity: 0.78;
+}
+
+.article-card:hover .article-card__image {
+  transform: scale(1.025);
+}
+
+/* =================================================
+   SMALLER DESKTOP
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .articles {
+    --articles-gutter:
+      clamp(
+        80px,
+        8.333vw,
+        120px
+      );
+  }
+}
+
+/* =================================================
+   LARGE TABLET
+   1024 — 1199
+
+   Uses the same filter-icon interaction as tablet.
+   Desktop pills/arrows are hidden at this range,
+   while the desktop-style article carousel remains.
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .articles {
+    height: 800px;
+  }
+
+  .articles__inner {
+    height: 800px;
+  }
+
+  .articles__header {
+    left: var(--articles-gutter);
+    right: var(--articles-gutter);
+
+    width: auto;
+  }
+
+  .articles__heading-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+  }
+
+  .articles__heading {
+    width: auto;
+
+    flex: 0 1 auto;
+  }
+
+  .articles__mobile-filter {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--color-gray-light);
+
+    cursor: pointer;
+
+    transition:
+      background-color 220ms ease,
+      transform 220ms ease;
+  }
+
+  .articles__mobile-filter img {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 220ms ease;
+  }
+
+  .articles__mobile-filter--open {
+    background: var(--color-beige);
+  }
+
+  .articles__mobile-filter--open img {
+    transform: scale(0.92);
+  }
+
+  .articles__mobile-filter--active::after {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    width: 7px;
+    height: 7px;
+
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+
+    background: var(--color-primary);
+  }
+
+  .articles__toolbar {
+    display: none;
+  }
+
+  .articles__mobile-filters {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-6px);
+
+    pointer-events: none;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 220ms;
+  }
+
+  .articles__mobile-filters--open {
+    max-height: 120px;
+
+    margin-top: 20px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 0s;
+  }
+
+  .articles__mobile-category {
+    width: auto;
+    height: 42px;
+
+    flex: 0 0 auto;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+
+  .articles__viewport {
+    top: 350px;
+  }
+
+  .articles--filters-open .articles__viewport {
+    top: 430px;
+  }
+}
+
+/* =================================================
+   TABLET
+   768 — 1023
+
+   Uses mobile FILTER logic
+   while retaining tablet article carousel.
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .articles {
+    --articles-gutter: 40px;
+
+    height: 800px;
+  }
+
+  .articles__inner {
+    height: 800px;
+  }
+
+  /* =================================================
+     TABLET HEADER
+  ================================================= */
+
+  .articles__header {
+    top: 72px;
+    left: 40px;
+
+    width: calc(100% - 80px);
+  }
+
+  /* =================================================
+     TITLE + FILTER ICON
+  ================================================= */
+
+  .articles__heading-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+  }
+
+  .articles__heading {
+    width: auto;
+
+    flex: 0 1 auto;
+  }
+
+  /* =================================================
+     TABLET FILTER BUTTON
+  ================================================= */
+
+  .articles__mobile-filter {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--color-gray-light);
+
+    cursor: pointer;
+
+    transition:
+      background-color 220ms ease,
+      transform 220ms ease;
+  }
+
+  .articles__mobile-filter img {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 220ms ease;
+  }
+
+  .articles__mobile-filter--open {
+    background: var(--color-beige);
+  }
+
+  .articles__mobile-filter--open img {
+    transform: scale(0.92);
+  }
+
+  .articles__mobile-filter--active::after {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    width: 7px;
+    height: 7px;
+
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+
+    background: var(--color-primary);
+  }
+
+  /* =================================================
+     TABLET INTRO
+  ================================================= */
+
+  .articles__intro {
+    width: 100%;
+
+    margin-top: 24px;
+  }
+
+  /* =================================================
+     HIDE DESKTOP PILLS + ARROWS TOOLBAR
+  ================================================= */
+
+  .articles__toolbar {
+    display: none;
+  }
+
+  /* =================================================
+     TABLET FILTER DROPDOWN
+  ================================================= */
+
+  .articles__mobile-filters {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-6px);
+
+    pointer-events: none;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 220ms;
+  }
+
+  .articles__mobile-filters--open {
+    max-height: 120px;
+
+    margin-top: 20px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 0s;
+  }
+
+  .articles__mobile-category {
+    width: auto;
+    height: 42px;
+
+    flex: 0 0 auto;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+
+  /* =================================================
+     TABLET ARTICLE CAROUSEL
+
+     No pill row means cards can sit higher.
+  ================================================= */
+
+  .articles__viewport {
+    top: 320px;
+
+    height: 367px;
+  }
+
+  .articles__track {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* =================================================
+     WHEN FILTERS OPEN
+
+     Push cards downward instead of overlapping.
+  ================================================= */
+
+  .articles--filters-open .articles__viewport {
+    top: 400px;
+  }
+}
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 767px) {
+  .articles {
+    --articles-gutter: 20px;
+
+    width: 100%;
+    height: auto;
+
+    overflow: visible;
+
+    background: var(--color-white);
+  }
+
+  .articles__inner {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    padding: 80px 0;
+  }
+
+  /* =================================================
+     MOBILE HEADER
+  ================================================= */
+
+  .articles__header {
+    position: static;
+
+    width: calc(100% - 40px);
+
+    margin: 0 auto;
+  }
+
+  /* =================================================
+     HEADING ROW
+  ================================================= */
+
+  .articles__heading-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+  }
+
+  .articles__heading {
+    width: auto;
+
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE FILTER BUTTON
+  ================================================= */
+
+  .articles__mobile-filter {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--color-gray-light);
+
+    cursor: pointer;
+
+    transition:
+      background-color 220ms ease,
+      transform 220ms ease;
+  }
+
+  .articles__mobile-filter img {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 220ms ease;
+  }
+
+  .articles__mobile-filter--open {
+    background: var(--color-beige);
+  }
+
+  .articles__mobile-filter--open img {
+    transform: scale(0.92);
+  }
+
+  .articles__mobile-filter--active::after {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    width: 7px;
+    height: 7px;
+
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+
+    background: var(--color-primary);
+  }
+
+  /* =================================================
+     MOBILE INTRO
+  ================================================= */
+
+  .articles__intro {
+    width: 100%;
+
+    margin: 20px 0 0;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE FILTER PANEL
+  ================================================= */
+
+  .articles__mobile-filters {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-6px);
+
+    pointer-events: none;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 220ms;
+  }
+
+  .articles__mobile-filters--open {
+    max-height: 150px;
+
+    margin-top: 20px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+    transition:
+      max-height 220ms ease,
+      margin-top 220ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 0s;
+  }
+
+  .articles__mobile-category {
+    width: auto;
+
+    height: 38px;
+
+    padding: 0 16px;
+
+    flex: 0 0 auto;
+
+    font-size: 14px;
+  }
+
+  /* =================================================
+     DESKTOP TOOLBAR HIDDEN
+  ================================================= */
+
+  .articles__toolbar {
+    display: none;
+  }
+
+  /* =================================================
+     MOBILE ARTICLE LIST
+  ================================================= */
+
+  .articles__viewport {
+    position: static;
+
+    width: calc(100% - 40px);
+    height: auto;
+
+    margin: 60px auto 0;
+
+    overflow: visible;
+
+    scroll-behavior: auto;
+
+    transition: margin-top 220ms ease;
+  }
+
+  .articles--filters-open .articles__viewport {
+    margin-top: 40px;
+  }
+
+  .articles__track {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 30px;
+
+    padding: 0;
+  }
+
+  /* =================================================
+     MOBILE CARD
+  ================================================= */
+
+  .article-card {
+    width: 100%;
+    height: auto;
+
+    flex: none;
+  }
+
+  .article-card__visual {
+    width: 100%;
+    height: 184px;
+
+    flex: 0 0 184px;
+
+    border-radius: 8px;
+  }
+
+  .article-card__title {
+    top: 20px;
+    left: 20px;
+
+    width: calc(100% - 40px);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .article-card__meta {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    gap: 12px;
+  }
+
+  .article-card__category,
+  .article-card__date {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .article-card__body {
+    padding-top: 10px;
+  }
+
+  .article-card__description {
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .article-card__read {
+    margin-top: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     READ MORE
+  ================================================= */
+
+  .articles__read-more {
+    width: calc(100% - 40px);
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px auto 0;
+
+    padding: 0;
+
+    border: 1px solid var(--color-primary);
+    border-radius: 32px;
+
+    color: var(--color-primary);
+
+    background: var(--color-beige);
+
+    font-family: var(--articles-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+  }
+
+  .articles__read-more:active {
+    transform: scale(0.985);
+  }
+
+  .article-card:hover .article-card__image {
+    transform: none;
+  }
+
+  .article-card__read:hover {
+    gap: 8px;
+
+    opacity: 1;
+  }
+}
+
+/* =================================================
+   MOBILE READ MORE HOVER
+================================================= */
+
+@media (max-width: 767px) and (hover: hover) {
+  .articles__read-more:hover {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+  }
+}
+
+/* =================================================
+   BELOW 360
+================================================= */
+
+@media (max-width: 359px) {
+  .articles__header,
+  .articles__viewport,
+  .articles__read-more {
+    width: calc(100% - 32px);
+  }
+
+  .articles__heading {
+    font-size: 21px;
+  }
+
+  .articles__mobile-filter {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+  .articles__mobile-category {
+    padding: 0 14px;
+
+    font-size: 13px;
+  }
+
+  .article-card__title {
+    font-size: 22px;
+  }
+}

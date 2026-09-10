@@ -1,0 +1,824 @@
+.hero {
+  width: 100%;
+  background: var(--color-white);
+}
+
+.hero__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 940px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+/* =================================================
+   DESKTOP CENTER COLUMN
+================================================= */
+
+.hero__beige-panel {
+  position: absolute;
+
+  top: -80px;
+  left: 50%;
+
+  width: min(591px, 41.0417vw);
+  height: 1040px;
+
+  transform: translateX(-50%);
+
+  background: var(--color-beige);
+}
+
+/* =================================================
+   DESKTOP GRAY PANEL
+================================================= */
+
+.hero__gray-panel {
+  position: absolute;
+
+  left: 25%;
+  bottom: 0;
+
+  width: min(655px, 45.4861vw);
+  height: 298px;
+
+  background: var(--color-gray-light);
+}
+
+/* =================================================
+   HERO TITLE
+================================================= */
+
+.hero__title {
+  position: absolute;
+  z-index: 4;
+
+  top: 120px;
+  left: 120px;
+
+  width: 645px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family:
+    "Avenir",
+    "Avenir Next",
+    "Manrope",
+    sans-serif;
+
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+}
+
+.hero__title span {
+  color: var(--color-primary);
+}
+
+/* =================================================
+   INTRO
+================================================= */
+
+.hero__intro {
+  position: absolute;
+  z-index: 4;
+
+  top: 470px;
+  left: 120px;
+
+  width: 290px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   IMAGE
+================================================= */
+
+.hero__image-wrapper {
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  bottom: 0;
+
+  width: min(591px, 41.0417vw);
+
+  aspect-ratio: 591 / 728;
+
+  transform: translateX(-50%);
+
+  overflow: hidden;
+}
+
+.hero__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =================================================
+   PROPERTY COPY
+================================================= */
+
+.hero__property-copy {
+  position: absolute;
+  z-index: 4;
+
+  top: 289px;
+  right: 120px;
+
+  width: 275px;
+}
+
+.hero__property-name {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.hero__property-description {
+  width: 275px;
+
+  margin: 24px 0 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   PROPERTY DETAILS
+================================================= */
+
+.hero__details {
+  position: absolute;
+  z-index: 4;
+
+  top: 441px;
+  right: 120px;
+
+  width: 275px;
+}
+
+/* =================================================
+   DESKTOP ARROWS
+================================================= */
+
+.hero__desktop-arrows {
+  position: absolute;
+  z-index: 5;
+
+  top: 120px;
+  right: 120px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.hero__mobile-arrows {
+  display: none;
+}
+
+/* =================================================
+   SOCIALS
+================================================= */
+
+.hero__socials {
+  position: absolute;
+  z-index: 4;
+
+  bottom: 100px;
+  left: 120px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.hero__socials a {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.hero__socials img {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+}
+
+.hero__socials a:hover {
+  opacity: 0.72;
+
+  transform: translateY(-2px);
+}
+
+/* =================================================
+   CTA
+================================================= */
+
+.hero__cta {
+  position: absolute;
+  z-index: 4;
+
+  right: 120px;
+  bottom: 100px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.hero__cta > span {
+  color: var(--color-primary);
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   SMALLER DESKTOPS
+   INCLUDING IPAD PRO
+   1024 — 1439
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero__title,
+  .hero__intro,
+  .hero__socials {
+    left:
+      clamp(
+        50px,
+        8.333vw,
+        120px
+      );
+  }
+
+  .hero__property-copy,
+  .hero__details,
+  .hero__desktop-arrows,
+  .hero__cta {
+    right:
+      clamp(
+        50px,
+        8.333vw,
+        120px
+      );
+  }
+
+  .hero__title {
+    width: 45%;
+
+    font-size:
+      clamp(
+        70px,
+        6.111vw,
+        88px
+      );
+  }
+
+  .hero__property-copy,
+  .hero__details {
+    width:
+      min(
+        275px,
+        19.1vw
+      );
+  }
+
+  .hero__property-description {
+    width: 100%;
+  }
+}
+
+/* =================================================
+   TABLET
+   768 — 1023
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero__inner {
+    height: 900px;
+  }
+
+  .hero__beige-panel,
+  .hero__image-wrapper {
+    width: 44%;
+  }
+
+  .hero__gray-panel {
+    left: 28%;
+
+    width: 50%;
+  }
+
+  .hero__title {
+    top: 90px;
+    left: 40px;
+
+    width: 55%;
+
+    font-size:
+      clamp(
+        52px,
+        7vw,
+        68px
+      );
+  }
+
+  .hero__intro {
+    top: clamp(350px, 43vw, 390px);
+    left: 40px;
+
+    width: 245px;
+  }
+
+  .hero__property-copy {
+    right: 40px;
+
+    width: 22%;
+  }
+
+  .hero__property-description {
+    width: 100%;
+  }
+
+  .hero__details {
+    right: 40px;
+
+    width: 22%;
+  }
+
+  .hero__desktop-arrows {
+    right: 40px;
+  }
+
+  .hero__socials {
+    left: 40px;
+  }
+
+  .hero__cta {
+    right: 40px;
+  }
+}
+
+/* =================================================
+   IPAD MINI
+   768 — 799
+
+   Match the already-approved iPad Air CTA treatment:
+   keep the gray backing under the centre image and
+   keep View More fully inside the white right column.
+================================================= */
+
+@media (min-width: 768px) and (max-width: 799px) {
+  .hero__gray-panel {
+    left: 28%;
+    width: 44%;
+  }
+
+  .hero__cta {
+    right: 0;
+
+    width: 28%;
+
+    justify-content: center;
+
+    gap: 12px;
+  }
+}
+
+/* =================================================
+   IPAD AIR / MID TABLET
+   800 — 839
+
+   Keep the gray backing under the centre image only
+   and keep View More fully inside the white CTA column.
+================================================= */
+
+@media (min-width: 800px) and (max-width: 839px) {
+  .hero__gray-panel {
+    left: 28%;
+    width: 44%;
+  }
+
+  .hero__cta {
+    right: 0;
+
+    width: 28%;
+
+    justify-content: center;
+
+    gap: 12px;
+  }
+}
+
+/* =================================================
+   ASUS ZENBOOK FOLD / WIDE MID TABLET
+   840 — 899
+
+   Keep the gray block exactly under the center
+   image and keep View More fully inside the
+   white CTA column.
+================================================= */
+
+@media (min-width: 840px) and (max-width: 899px) {
+  .hero__gray-panel {
+    left: 28%;
+    width: 44%;
+  }
+
+  .hero__cta {
+    right: 0;
+
+    width: 28%;
+
+    justify-content: center;
+
+    gap: 12px;
+  }
+}
+
+/* =================================================
+   SURFACE PRO / WIDER SMALL TABLETS
+   900 — 1023
+
+   Keep gray background strictly beneath the
+   centre house/image column.
+================================================= */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .hero__gray-panel {
+    left: 28%;
+
+    width: 44%;
+  }
+}
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 767px) {
+  .hero {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    margin: 0;
+
+    padding:
+      60px
+      0
+      80px;
+
+    overflow: visible;
+  }
+
+  .hero__beige-panel,
+  .hero__gray-panel,
+  .hero__socials,
+  .hero__desktop-arrows {
+    display: none;
+  }
+
+  /* =================================================
+     MOBILE TITLE
+  ================================================= */
+
+  .hero__title {
+    position: static;
+
+    width:
+      calc(100% - 40px);
+
+    height: 159px;
+
+    flex: 0 0 159px;
+
+    margin:
+      0
+      auto
+      20px;
+
+    color: var(--color-text);
+
+    font-family:
+      "Avenir",
+      "Avenir Next",
+      "Manrope",
+      sans-serif;
+
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+
+    white-space: normal;
+
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .hero__title span {
+    color: var(--color-primary);
+  }
+
+  /* =================================================
+     MOBILE INTRO
+  ================================================= */
+
+  .hero__intro {
+    position: static;
+
+    width: 290px;
+    max-width:
+      calc(100% - 40px);
+
+    height: 84px;
+
+    flex: 0 0 84px;
+
+    margin:
+      0
+      auto
+      60px
+      20px;
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     PROPERTY COPY
+  ================================================= */
+
+  .hero__property-copy {
+    position: static;
+
+    width:
+      calc(100% - 40px);
+
+    min-height: 78px;
+
+    flex: 0 0 78px;
+
+    margin:
+      0
+      auto
+      20px;
+  }
+
+  .hero__property-name {
+    width: 100%;
+    height: 24px;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .hero__property-description {
+    width: 100%;
+    min-height: 44px;
+
+    margin:
+      10px
+      0
+      0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE IMAGE
+  ================================================= */
+
+  .hero__image-wrapper {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width:
+      calc(100% - 40px);
+
+    height: auto;
+
+    flex: 0 0 auto;
+
+    margin: 0 auto;
+
+    aspect-ratio: 320 / 419;
+
+    transform: none;
+
+    overflow: visible;
+
+    border-radius: 8px;
+
+    background: var(--color-beige);
+  }
+
+  .hero__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* =================================================
+     MOBILE ARROWS
+  ================================================= */
+
+  .hero__mobile-arrows {
+    position: absolute;
+    z-index: 6;
+
+    top: 50%;
+    right: -40px;
+    left: -40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transform:
+      translateY(-50%);
+  }
+
+  /* =================================================
+     MOBILE DETAILS
+  ================================================= */
+
+  .hero__details {
+    position: static;
+
+    width:
+      calc(100% - 40px);
+
+    height: 146px;
+
+    flex: 0 0 146px;
+
+    margin:
+      20px
+      auto
+      0;
+  }
+
+  /* =================================================
+     MOBILE CTA
+  ================================================= */
+
+  .hero__cta {
+    position: static;
+
+    width:
+      calc(100% - 40px);
+
+    height: 100px;
+
+    flex: 0 0 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin:
+      30px
+      auto
+      0;
+  }
+
+  .hero__cta > span {
+    color: var(--color-primary);
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+}
+
+/* =================================================
+   BELOW 360PX
+================================================= */
+
+@media (max-width: 359px) {
+  .hero__title,
+  .hero__property-copy,
+  .hero__image-wrapper,
+  .hero__details,
+  .hero__cta {
+    width:
+      calc(100% - 32px);
+  }
+
+  .hero__intro {
+    width:
+      calc(100% - 32px);
+
+    max-width: none;
+
+    margin-left: 16px;
+  }
+
+  .hero__title {
+    font-size:
+      clamp(
+        38px,
+        12vw,
+        44px
+      );
+  }
+}

@@ -1,0 +1,698 @@
+/* =================================================
+   BESTSELLERS
+
+   DESKTOP FIGMA:
+   1440 × 665
+================================================= */
+
+.bestsellers {
+  --bestsellers-font:
+    "Avenir",
+    "Avenir Next",
+    "Manrope",
+    sans-serif;
+
+  --bestsellers-gutter: 120px;
+
+  width: 100%;
+  height: 665px;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+.bestsellers__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 665px;
+
+  margin: 0 auto;
+}
+
+/* =================================================
+   DESKTOP HEADING
+================================================= */
+
+.bestsellers__heading {
+  position: absolute;
+
+  top: 120px;
+  left: var(--bestsellers-gutter);
+
+  width: 311px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--bestsellers-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* =================================================
+   DESKTOP NAVIGATION
+================================================= */
+
+.bestsellers__navigation {
+  position: absolute;
+  z-index: 10;
+
+  top: 115px;
+  right: var(--bestsellers-gutter);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.bestsellers__nav-button {
+  width: 80px;
+  height: 80px;
+
+  flex: 0 0 80px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-gray);
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.bestsellers__nav-button span {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.bestsellers__nav-button:hover:not(:disabled) {
+  border-color: var(--color-primary);
+
+  background: var(--color-beige);
+
+  transform: translateY(-2px);
+}
+
+.bestsellers__nav-button:disabled {
+  opacity: 0.4;
+
+  cursor: default;
+}
+
+.bestsellers__nav-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* =================================================
+   DESKTOP CAROUSEL VIEWPORT
+================================================= */
+
+.bestsellers__viewport {
+  position: absolute;
+
+  top: 235px;
+  left: 0;
+
+  width: 100%;
+  height: 310px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  overscroll-behavior-x: contain;
+}
+
+.bestsellers__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   DESKTOP TRACK
+================================================= */
+
+.bestsellers__track {
+  width: max-content;
+  height: 310px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-left: var(--bestsellers-gutter);
+  padding-right: var(--bestsellers-gutter);
+}
+
+/* =================================================
+   PROPERTY CARD
+================================================= */
+
+.property-card {
+  position: relative;
+
+  width: 387px;
+  height: 310px;
+
+  flex: 0 0 387px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: var(--color-text);
+}
+
+/* =================================================
+   CARD IMAGE
+================================================= */
+
+.property-card__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 500ms ease;
+}
+
+/* =================================================
+   IMAGE OVERLAY
+================================================= */
+
+.property-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(53, 58, 69, 0) 61.093%,
+      rgba(53, 58, 69, 1) 100%
+    ),
+    rgba(53, 58, 69, 0.15);
+
+  pointer-events: none;
+}
+
+/* =================================================
+   DESKTOP CARD TITLE
+================================================= */
+
+.property-card__title {
+  position: absolute;
+  z-index: 2;
+
+  top: 30px;
+  left: 30px;
+
+  width: 327px;
+
+  margin: 0;
+
+  font-family: var(--bestsellers-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+
+  color: transparent;
+
+  background:
+    linear-gradient(
+      96.7deg,
+      #ffffff 1.9%,
+      rgba(255, 255, 255, 0.7) 21.4%,
+      #ffffff 72.5%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* =================================================
+   DESKTOP PRICE + DETAILS
+================================================= */
+
+.property-card__information {
+  position: absolute;
+  z-index: 3;
+
+  top: 210px;
+  left: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+/* =================================================
+   DESKTOP PRICE
+================================================= */
+
+.property-card__price {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--bestsellers-font);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   PROPERTY DETAILS
+================================================= */
+
+.property-card__details {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 16px;
+}
+
+.property-card__detail {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-white);
+}
+
+.property-card__detail img {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  flex: 0 0 24px;
+}
+
+.property-card__detail span {
+  color: var(--color-white);
+
+  font-family: var(--bestsellers-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   DESKTOP CARD CTA
+================================================= */
+
+.property-card__cta {
+  position: absolute;
+  z-index: 4;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 100px;
+  height: 100px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(138, 145, 167, 0.6) 100%
+    );
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  cursor: pointer;
+
+  transition:
+    transform 250ms ease,
+    filter 250ms ease;
+}
+
+.property-card__cta img {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  transition: transform 250ms ease;
+}
+
+/* =================================================
+   CARD INTERACTION
+================================================= */
+
+.property-card:hover .property-card__image {
+  transform: scale(1.025);
+}
+
+.property-card:hover .property-card__cta {
+  transform: scale(1.04);
+}
+
+.property-card:hover .property-card__cta img {
+  transform: translate(3px, -3px);
+}
+
+.property-card__cta:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}
+
+/* =================================================
+   DESKTOP BELOW 1440
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .bestsellers {
+    --bestsellers-gutter:
+      clamp(
+        80px,
+        8.333vw,
+        120px
+      );
+  }
+}
+
+/* =================================================
+   TABLET
+   768 — 1023
+
+   Matches About section:
+   40px left
+   40px right
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bestsellers {
+    --bestsellers-gutter: 40px;
+  }
+
+  .bestsellers__heading {
+    left: 40px;
+  }
+
+  .bestsellers__navigation {
+    right: 40px;
+  }
+
+  .bestsellers__track {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 767px) {
+  .bestsellers {
+    --bestsellers-gutter: 20px;
+
+    width: 100%;
+    height: auto;
+
+    overflow: visible;
+
+    background: var(--color-white);
+  }
+
+  .bestsellers__inner {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    padding: 80px 0;
+  }
+
+  /* =================================================
+     MOBILE HEADING
+  ================================================= */
+
+  .bestsellers__heading {
+    position: static;
+
+    width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    color: var(--color-text);
+
+    font-family: var(--bestsellers-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE NAVIGATION
+  ================================================= */
+
+  .bestsellers__navigation {
+    display: none;
+  }
+
+  /* =================================================
+     MOBILE CARD AREA
+  ================================================= */
+
+  .bestsellers__viewport {
+    position: static;
+
+    width: calc(100% - 40px);
+    height: auto;
+
+    margin: 60px auto 0;
+
+    overflow: visible;
+
+    scroll-behavior: auto;
+  }
+
+  /* =================================================
+     MOBILE TRACK
+  ================================================= */
+
+  .bestsellers__track {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 20px;
+
+    padding: 0;
+  }
+
+  /* =================================================
+     MOBILE CARD
+  ================================================= */
+
+  .property-card {
+    width: 100%;
+    height: 310px;
+
+    flex: 0 0 310px;
+
+    border-radius: 8px;
+  }
+
+  /* =================================================
+     MOBILE TITLE
+  ================================================= */
+
+  .property-card__title {
+    top: 30px;
+    left: 20px;
+
+    width: calc(100% - 40px);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE PRICE + DETAILS
+  ================================================= */
+
+  .property-card__information {
+    top: 210px;
+    left: 20px;
+
+    gap: 12px;
+  }
+
+  /* =================================================
+     MOBILE PRICE
+  ================================================= */
+
+  .property-card__price {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE DETAILS
+  ================================================= */
+
+  .property-card__details {
+    gap: 16px;
+  }
+
+  .property-card__detail {
+    gap: 8px;
+  }
+
+  .property-card__detail img {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+  }
+
+  .property-card__detail span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE CTA
+  ================================================= */
+
+  .property-card__cta {
+    right: 20px;
+    bottom: 20px;
+
+    width: 80px;
+    height: 80px;
+  }
+
+  .property-card__cta img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* =================================================
+     MOBILE TOUCH
+  ================================================= */
+
+  .property-card:hover .property-card__image {
+    transform: none;
+  }
+
+  .property-card:hover .property-card__cta {
+    transform: none;
+  }
+
+  .property-card:hover .property-card__cta img {
+    transform: none;
+  }
+}
+
+/* =================================================
+   BELOW 360PX
+================================================= */
+
+@media (max-width: 359px) {
+  .bestsellers__heading,
+  .bestsellers__viewport {
+    width: calc(100% - 32px);
+  }
+
+  .property-card__title {
+    font-size: 22px;
+  }
+
+  .property-card__details {
+    gap: 12px;
+  }
+
+  .property-card__detail {
+    gap: 6px;
+  }
+
+  .property-card__detail span {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,1327 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap");
+
+/* =================================================
+   HOW WE WORK
+
+   IMPORTANT:
+   Desktop implementation is preserved.
+   Mobile overrides begin at max-width: 767px.
+================================================= */
+
+.how-we-work {
+  --how-font:
+    "Avenir",
+    "Avenir Next",
+    "Manrope",
+    sans-serif;
+
+  width: 100%;
+
+  background: var(--color-gray-light);
+}
+
+/* =================================================
+   DESKTOP MAIN SECTION
+================================================= */
+
+.how-we-work__main {
+  width: 100%;
+  height: 652px;
+
+  background: var(--color-gray-light);
+}
+
+.how-we-work__content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 652px;
+
+  margin: 0 auto;
+}
+
+/* =================================================
+   DESKTOP LEFT COLUMN
+================================================= */
+
+.how-we-work__left {
+  position: absolute;
+
+  top: 120px;
+  left: 120px;
+
+  width: 488px;
+}
+
+/* =================================================
+   DESKTOP HEADING
+
+   Figma:
+   Avenir Black
+   46px
+   120%
+   2%
+================================================= */
+
+.how-we-work__heading {
+  width: 378px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--how-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   DESKTOP IMAGE
+
+   Figma:
+   488 × 280px
+
+   Heading → image:
+   83px
+================================================= */
+
+.how-we-work__visual {
+  position: relative;
+
+  width: 488px;
+  height: 280px;
+
+  margin-top: 83px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: var(--color-gray);
+}
+
+.how-we-work__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =================================================
+   PLAY CONTROL
+================================================= */
+
+.how-we-work__play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 80px;
+  height: 80px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(166, 173, 177, 0.72) 100%
+    );
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  cursor: pointer;
+
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.how-we-work__play img {
+  width: 28px;
+  height: 28px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 220ms ease;
+}
+
+.how-we-work__play:hover {
+  transform:
+    translate(-50%, -50%)
+    scale(1.06);
+}
+
+.how-we-work__play:hover img {
+  transform: translateX(2px);
+}
+
+.how-we-work__play:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}
+
+/* =================================================
+   DESKTOP PROCESS COLUMN
+================================================= */
+
+.how-we-work__steps {
+  position: absolute;
+
+  top: 120px;
+  left: 730px;
+
+  width: 590px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+/* =================================================
+   DESKTOP STEP ROW
+================================================= */
+
+.how-we-work__step {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 48px 1fr;
+
+  column-gap: 20px;
+
+  align-items: start;
+}
+
+/* =================================================
+   STEP NUMBER
+================================================= */
+
+.how-we-work__step-number {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background: var(--color-white);
+
+  font-family: var(--how-font);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   STEP COPY
+================================================= */
+
+.how-we-work__step-copy {
+  min-width: 0;
+}
+
+/* =================================================
+   DESKTOP STEP TITLE
+================================================= */
+
+.how-we-work__step-title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--how-font);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   DESKTOP STEP BODY
+================================================= */
+
+.how-we-work__step-description {
+  width: 100%;
+
+  margin: 10px 0 0;
+
+  color: var(--color-text);
+
+  font-family: var(--how-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   DESKTOP CTA
+================================================= */
+
+.how-we-work__cta {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 190px;
+
+  margin: 0 auto;
+
+  overflow: visible;
+
+  background: var(--color-text);
+}
+
+/* =================================================
+   DESKTOP CTA BEIGE SHAPE
+================================================= */
+
+.how-we-work__cta-shape {
+  position: absolute;
+
+  top: 0;
+  left: 80px;
+
+  width: 560px;
+  height: 190px;
+
+  background: var(--color-primary);
+
+  clip-path: polygon(
+    0 0,
+    84% 0,
+    100% 100%,
+    12% 100%
+  );
+}
+
+/* =================================================
+   DESKTOP CTA HOUSE
+================================================= */
+
+.how-we-work__cta-house {
+  position: absolute;
+  z-index: 2;
+
+  left: 70px;
+  bottom: 0;
+
+  width: 540px;
+  height: 216px;
+
+  object-fit: contain;
+  object-position: left bottom;
+
+  pointer-events: none;
+}
+
+/* =================================================
+   DESKTOP CTA COPY
+================================================= */
+
+.how-we-work__cta-copy {
+  position: absolute;
+  z-index: 3;
+
+  top: 43px;
+  left: 730px;
+}
+
+.how-we-work__cta-title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--how-font);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+}
+
+.how-we-work__cta-description {
+  margin: 24px 0 0;
+
+  color: var(--color-white);
+
+  font-family: var(--how-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   DESKTOP CTA BUTTON
+================================================= */
+
+.how-we-work__cta-button {
+  position: absolute;
+  z-index: 3;
+
+  top: 47px;
+  right: 120px;
+
+  width: 80px;
+  height: 80px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(138, 145, 167, 0.65) 100%
+    );
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  cursor: pointer;
+
+  transition: transform 220ms ease;
+}
+
+.how-we-work__cta-button img {
+  width: 40px;
+  height: 40px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 220ms ease;
+}
+
+.how-we-work__cta-button:hover {
+  transform: scale(1.05);
+}
+
+.how-we-work__cta-button:hover img {
+  transform: translate(3px, -3px);
+}
+
+.how-we-work__cta-button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}
+
+/* =================================================
+   DESKTOP BELOW 1440
+
+   Existing desktop behaviour preserved from 1025px upward.
+================================================= */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .how-we-work__left {
+    left: clamp(80px, 8.333vw, 120px);
+  }
+
+  .how-we-work__steps {
+    right: clamp(80px, 8.333vw, 120px);
+    left: auto;
+
+    width: min(590px, 42vw);
+  }
+
+  .how-we-work__cta-button {
+    right: clamp(80px, 8.333vw, 120px);
+  }
+}
+
+/* =================================================
+   TABLET / 1024PX LARGE TABLET
+   768 — 1024
+
+   Uses the approved mobile content order,
+   widened for tablet with 40px side gutters.
+
+   Desktop and phone layouts remain unchanged.
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .how-we-work {
+    width: 100%;
+
+    background: var(--color-gray-light);
+  }
+
+  /* =================================================
+     TABLET MAIN
+  ================================================= */
+
+  .how-we-work__main {
+    width: 100%;
+    height: auto;
+
+    padding-bottom: 0;
+
+    background: var(--color-gray-light);
+  }
+
+  .how-we-work__content {
+    position: relative;
+
+    width: calc(100% - 80px);
+    max-width: 688px;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+  }
+
+  /* Use the same stacked order as mobile */
+  .how-we-work__left {
+    display: contents;
+  }
+
+  /* =================================================
+     TABLET HEADING
+  ================================================= */
+
+  .how-we-work__heading {
+    position: static;
+
+    order: 1;
+
+    width: auto;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     TABLET STEPS
+  ================================================= */
+
+  .how-we-work__steps {
+    position: static;
+
+    order: 2;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    margin-top: 48px;
+  }
+
+  .how-we-work__step {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+
+    column-gap: 20px;
+
+    align-items: start;
+  }
+
+  .how-we-work__step-number {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: var(--color-primary);
+
+    background: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .how-we-work__step-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .how-we-work__step-title {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .how-we-work__step-description {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 10px 0 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     TABLET IMAGE
+  ================================================= */
+
+  .how-we-work__visual {
+    position: relative;
+
+    order: 3;
+
+    width: 100%;
+    height: auto;
+
+    margin: 48px 0 0;
+
+    aspect-ratio: 488 / 280;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+  }
+
+  .how-we-work__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 8px;
+  }
+
+  .how-we-work__play {
+    width: 80px;
+    height: 80px;
+  }
+
+  .how-we-work__play img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* =================================================
+     TABLET CTA
+
+     Same stacked logic as mobile:
+     visual on top, copy and button below.
+  ================================================= */
+
+  .how-we-work__cta {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: 340px;
+
+    margin: 0 0 80px;
+
+    overflow: hidden;
+
+    background: var(--color-text);
+  }
+
+  .how-we-work__cta-shape {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 220px;
+
+    background: var(--color-primary);
+
+    clip-path: polygon(
+      0 0,
+      84% 0,
+      100% 100%,
+      12% 100%
+    );
+  }
+
+  .how-we-work__cta-house {
+    position: absolute;
+    z-index: 2;
+
+    top: 4px;
+    left: 50%;
+
+    width: 540px;
+    height: 216px;
+
+    transform: translateX(-50%);
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    pointer-events: none;
+  }
+
+  .how-we-work__cta-copy {
+    position: absolute;
+    z-index: 3;
+
+    top: 242px;
+    left: 30px;
+
+    width: calc(100% - 150px);
+  }
+
+  .how-we-work__cta-title {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+
+    text-transform: uppercase;
+  }
+
+  .how-we-work__cta-description {
+    width: 100%;
+
+    margin: 10px 0 0;
+
+    color: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .how-we-work__cta-button {
+    position: absolute;
+    z-index: 4;
+
+    top: 250px;
+    right: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(138, 145, 167, 0.65) 100%
+      );
+  }
+
+  .how-we-work__cta-button img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* =================================================
+   MOBILE
+   FIGMA REFERENCE: 360PX
+
+   Main content:
+   20px | 320px | 20px
+
+   Mobile order:
+   Heading
+   Steps
+   Image
+   CTA
+================================================= */
+
+@media (max-width: 767px) {
+  .how-we-work {
+    width: 100%;
+
+    background: var(--color-gray-light);
+  }
+
+  /* =================================================
+     MOBILE MAIN
+  ================================================= */
+
+  .how-we-work__main {
+    width: 100%;
+    height: auto;
+
+    padding-bottom: 0;
+
+    background: var(--color-gray-light);
+  }
+
+  .how-we-work__content {
+    position: relative;
+
+    width: calc(100% - 40px);
+    max-width: 320px;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+  }
+
+  /* =================================================
+     FLATTEN LEFT WRAPPER FOR MOBILE ORDERING
+  ================================================= */
+
+  .how-we-work__left {
+    display: contents;
+  }
+
+  /* =================================================
+     MOBILE HEADING
+
+     Figma:
+     Avenir Black
+     24px
+     120%
+     2%
+  ================================================= */
+
+  .how-we-work__heading {
+    position: static;
+
+    order: 1;
+
+    width: auto;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE STEPS
+
+     Heading → process:
+     60px
+
+     Process row gap:
+     30px
+  ================================================= */
+
+  .how-we-work__steps {
+    position: static;
+
+    order: 2;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    margin-top: 60px;
+  }
+
+  /* =================================================
+     MOBILE STEP
+
+     Number:
+     48 × 48px
+
+     Number → text:
+     20px
+  ================================================= */
+
+  .how-we-work__step {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 48px minmax(0, 1fr);
+
+    column-gap: 20px;
+
+    align-items: start;
+  }
+
+  /* =================================================
+     MOBILE STEP NUMBER
+  ================================================= */
+
+  .how-we-work__step-number {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: var(--color-primary);
+
+    background: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE STEP COPY
+  ================================================= */
+
+  .how-we-work__step-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* =================================================
+     MOBILE STEP TITLE
+
+     Figma:
+     Avenir Heavy
+     20px
+     120%
+     2%
+  ================================================= */
+
+  .how-we-work__step-title {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE STEP BODY
+
+     Title → body:
+     10px
+
+     Figma:
+     Avenir Light
+     16px
+     140%
+     2%
+  ================================================= */
+
+  .how-we-work__step-description {
+    width: 100%;
+
+    margin: 10px 0 0;
+
+    color: var(--color-text);
+
+    font-family: var(--how-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE IMAGE
+
+     Steps → image:
+     30px
+
+     320 × 180px
+  ================================================= */
+
+  .how-we-work__visual {
+    position: relative;
+
+    order: 3;
+
+    width: 100%;
+    height: 180px;
+
+    margin: 30px 0 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+  }
+
+  .how-we-work__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 8px;
+  }
+
+  /* =================================================
+     MOBILE PLAY
+  ================================================= */
+
+  .how-we-work__play {
+    width: 80px;
+    height: 80px;
+  }
+
+  .how-we-work__play img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .how-we-work__play:hover {
+    transform: translate(-50%, -50%);
+  }
+
+  .how-we-work__play:hover img {
+    transform: none;
+  }
+
+  /* =================================================
+     MOBILE CTA
+
+     The intended image → CTA gap now comes only
+     from the 80px bottom padding on content.
+
+     No additional 80px is added by main.
+  ================================================= */
+
+  .how-we-work__cta {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: 272px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: var(--color-text);
+  }
+
+  /* =================================================
+     MOBILE CTA TOP SHAPE
+  ================================================= */
+
+  .how-we-work__cta-shape {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 400px;
+    height: 160px;
+
+    transform: translateX(-50%);
+
+    background: var(--color-primary);
+
+    clip-path: polygon(
+      0 0,
+      84% 0,
+      100% 100%,
+      12% 100%
+    );
+  }
+
+  /* =================================================
+     MOBILE CTA HOUSE
+
+     Figma:
+     approximately 400 × 160px
+  ================================================= */
+
+  .how-we-work__cta-house {
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    left: 50%;
+
+    width: 400px;
+    height: 160px;
+
+    transform: translateX(-50%);
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    pointer-events: none;
+  }
+
+  /* =================================================
+     MOBILE CTA COPY
+  ================================================= */
+
+  .how-we-work__cta-copy {
+    position: absolute;
+    z-index: 3;
+
+    top: 180px;
+    left: 20px;
+
+    width: 250px;
+  }
+
+  /* =================================================
+     MOBILE CTA TITLE
+
+     Figma:
+     Avenir Black
+     20px
+     120%
+     0%
+  ================================================= */
+
+  .how-we-work__cta-title {
+    width: 250px;
+
+    margin: 0;
+
+    color: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+
+    text-transform: uppercase;
+  }
+
+  /* =================================================
+     MOBILE CTA DESCRIPTION
+
+     Title → description:
+     10px
+  ================================================= */
+
+  .how-we-work__cta-description {
+    width: 260px;
+
+    margin: 10px 0 0;
+
+    color: var(--color-white);
+
+    font-family: var(--how-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     MOBILE CTA BUTTON
+  ================================================= */
+
+  .how-we-work__cta-button {
+    position: absolute;
+    z-index: 4;
+
+    top: 181px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(138, 145, 167, 0.65) 100%
+      );
+  }
+
+  .how-we-work__cta-button img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .how-we-work__cta-button:hover {
+    transform: none;
+  }
+
+  .how-we-work__cta-button:hover img {
+    transform: none;
+  }
+}
+
+/* =================================================
+   SURFACE DUO / WIDE PHONE
+   500 — 599
+
+   Only widens the existing mobile How We Work
+   content and video. All other mobile, tablet,
+   and desktop behaviour remains unchanged.
+================================================= */
+
+@media (min-width: 500px) and (max-width: 599px) {
+  .how-we-work__content {
+    width: calc(100% - 80px);
+    max-width: none;
+  }
+
+  .how-we-work__steps {
+    width: 100%;
+  }
+
+  .how-we-work__step-description {
+    width: 100%;
+  }
+
+  .how-we-work__visual {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* =================================================
+   BELOW 360PX
+================================================= */
+
+@media (max-width: 359px) {
+  .how-we-work__content {
+    width: calc(100% - 32px);
+  }
+
+  .how-we-work__heading {
+    font-size: 22px;
+  }
+
+  .how-we-work__step {
+    grid-template-columns: 44px minmax(0, 1fr);
+
+    column-gap: 16px;
+  }
+
+  .how-we-work__step-number {
+    width: 44px;
+    height: 44px;
+
+    font-size: 18px;
+  }
+
+  .how-we-work__cta-title {
+    width: calc(100vw - 120px);
+
+    font-size: 18px;
+  }
+
+  .how-we-work__cta-description {
+    width: calc(100vw - 120px);
+
+    font-size: 14px;
+  }
+}

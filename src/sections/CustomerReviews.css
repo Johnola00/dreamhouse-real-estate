@@ -1,0 +1,769 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600;700&display=swap");
+
+/* =================================================
+   CUSTOMER REVIEWS
+================================================= */
+
+.customer-reviews,
+.customer-reviews *,
+.customer-reviews *::before,
+.customer-reviews *::after {
+  box-sizing: border-box;
+}
+
+.customer-reviews {
+  --reviews-font:
+    "Avenir",
+    "Avenir Next",
+    "Mulish",
+    sans-serif;
+
+  --reviews-gutter: 120px;
+
+  width: 100%;
+  height: 640px;
+
+  overflow: hidden;
+
+  background: var(--color-gray-light);
+}
+
+.customer-reviews__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 640px;
+
+  margin: 0 auto;
+}
+
+/* =================================================
+   DESKTOP HEADING
+================================================= */
+
+.customer-reviews__heading {
+  position: absolute;
+
+  top: 120px;
+  left: var(--reviews-gutter);
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--reviews-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* =================================================
+   DESKTOP NAVIGATION
+================================================= */
+
+.customer-reviews__navigation {
+  position: absolute;
+  z-index: 20;
+
+  top: 115px;
+  right: var(--reviews-gutter);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.customer-reviews__nav-button {
+  width: 80px;
+  height: 80px;
+
+  flex: 0 0 80px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border:
+    1px solid
+    var(--color-gray);
+
+  border-radius: 50%;
+
+  color:
+    var(--color-primary);
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.customer-reviews__nav-button span {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.customer-reviews__nav-button:hover:not(:disabled) {
+  border-color:
+    var(--color-primary);
+
+  background:
+    var(--color-beige);
+
+  transform:
+    translateY(-2px);
+}
+
+.customer-reviews__nav-button:disabled {
+  opacity: 0.4;
+
+  cursor: default;
+}
+
+/* =================================================
+   DESKTOP VIEWPORT
+================================================= */
+
+.customer-reviews__viewport {
+  position: absolute;
+
+  top: 235px;
+  left: 0;
+
+  width: 100%;
+  height: 278px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  overscroll-behavior-x: contain;
+}
+
+.customer-reviews__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   DESKTOP TRACK
+================================================= */
+
+.customer-reviews__track {
+  width: max-content;
+  height: 278px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-left:
+    var(--reviews-gutter);
+
+  padding-right:
+    var(--reviews-gutter);
+}
+
+.customer-reviews__card-wrapper {
+  width: 488px;
+  height: 278px;
+
+  flex: 0 0 488px;
+}
+
+/* =================================================
+   DESKTOP CARD
+================================================= */
+
+.testimonial-card {
+  width: 488px;
+  height: 278px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background:
+    var(--color-white);
+}
+
+.testimonial-card__header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.testimonial-card__avatar {
+  width: 80px;
+  height: 80px;
+
+  flex: 0 0 80px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.testimonial-card__customer {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.testimonial-card__name {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--reviews-font);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+.testimonial-card__project {
+  margin: 0;
+
+  color:
+    var(--color-primary);
+
+  font-family: var(--reviews-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+.testimonial-card__review {
+  width: 428px;
+
+  margin:
+    20px
+    0
+    0;
+
+  color: var(--color-text);
+
+  font-family: var(--reviews-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   DESKTOP BELOW 1440
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .customer-reviews {
+    --reviews-gutter:
+      clamp(
+        80px,
+        8.333vw,
+        120px
+      );
+  }
+}
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 767px) {
+  .customer-reviews {
+    --reviews-gutter: 20px;
+
+    width: 100%;
+    height: 548px;
+
+    overflow: hidden;
+
+    background:
+      var(--color-gray-light);
+  }
+
+  .customer-reviews__inner {
+    position: relative;
+
+    width: 100%;
+    height: 548px;
+
+    margin: 0;
+  }
+
+  /* =================================================
+     HEADING
+  ================================================= */
+
+  .customer-reviews__heading {
+    position: absolute;
+
+    top: 72px;
+    left: 20px;
+
+    width:
+      calc(100% - 40px);
+
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     CAROUSEL VIEWPORT
+
+     Full section width.
+
+     Track itself supplies the 20px left margin.
+
+     This lets us preserve an exact visible preview
+     of the following card on every mobile viewport.
+  ================================================= */
+
+  .customer-reviews__viewport {
+    position: absolute;
+
+    top: 153px;
+    left: 0;
+
+    width: 100%;
+    height: 340px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scroll-snap-type:
+      x mandatory;
+
+    scroll-padding-left: 20px;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    overscroll-behavior-x:
+      contain;
+  }
+
+  .customer-reviews__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* =================================================
+     RESPONSIVE MOBILE TRACK
+
+     At 360px:
+
+     content area = 320px
+     card = 282px
+     gap = 20px
+     next-card preview = 38px
+
+     The exact same 38px preview is retained on
+     390, 412, 430, 440px etc.
+  ================================================= */
+
+  .customer-reviews__track {
+    width: 100%;
+    height: 340px;
+
+    display: grid;
+
+    grid-auto-flow: column;
+
+    grid-auto-columns:
+      calc(100% - 38px);
+
+    align-items: start;
+
+    gap: 20px;
+
+    padding:
+      0
+      20px;
+
+    box-sizing: border-box;
+  }
+
+  /* =================================================
+     RESPONSIVE CARD WRAPPER
+  ================================================= */
+
+  .customer-reviews__card-wrapper {
+    width: 100%;
+    height: 340px;
+
+    min-width: 0;
+
+    scroll-snap-align: start;
+
+    transition:
+      filter 220ms ease,
+      opacity 220ms ease;
+  }
+
+  /* =================================================
+     ACTIVE CARD
+  ================================================= */
+
+  .customer-reviews__card-wrapper--active {
+    filter: none;
+
+    opacity: 1;
+  }
+
+  /* =================================================
+     NEXT / INACTIVE CARD
+
+     Slightly blurred like the Figma.
+  ================================================= */
+
+  .customer-reviews__card-wrapper--inactive {
+    filter: blur(1px);
+
+    opacity: 0.38;
+  }
+
+  /* =================================================
+     MOBILE CARD
+  ================================================= */
+
+  .testimonial-card {
+    width: 100%;
+    height: 340px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background:
+      var(--color-white);
+  }
+
+  /* =================================================
+     HEADER
+  ================================================= */
+
+  .testimonial-card__header {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  /* =================================================
+     AVATAR
+  ================================================= */
+
+  .testimonial-card__avatar {
+    width: 60px;
+    height: 60px;
+
+    flex: 0 0 60px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+  }
+
+  /* =================================================
+     CUSTOMER COPY
+  ================================================= */
+
+  .testimonial-card__customer {
+    width:
+      calc(100% - 70px);
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  /* =================================================
+     NAME
+  ================================================= */
+
+  .testimonial-card__name {
+    width: 100%;
+
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* =================================================
+     PROJECT
+  ================================================= */
+
+  .testimonial-card__project {
+    width: 100%;
+
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    white-space: normal;
+  }
+
+  /* =================================================
+     REVIEW
+  ================================================= */
+
+  .testimonial-card__review {
+    width: 100%;
+    height: 220px;
+
+    margin:
+      20px
+      0
+      0;
+
+    overflow: hidden;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================================================
+     MOBILE NAVIGATION
+  ================================================= */
+
+  .customer-reviews__navigation {
+    position: absolute;
+    z-index: 30;
+
+    top: 293px;
+    left: 0;
+    right: auto;
+
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .customer-reviews__nav-button {
+    width: 60px;
+    height: 60px;
+
+    flex: 0 0 60px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border:
+      1px solid
+      var(--color-gray);
+
+    border-radius: 50%;
+
+    color:
+      var(--color-primary);
+
+    background:
+      var(--color-white);
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transform: none;
+  }
+
+  .customer-reviews__nav-button:first-child {
+    margin-left: -10px;
+  }
+
+  .customer-reviews__nav-button:last-child {
+    margin-right: -10px;
+  }
+
+  .customer-reviews__nav-button span {
+    font-size: 20px;
+  }
+
+  .customer-reviews__nav-button:hover:not(:disabled) {
+    border-color:
+      var(--color-gray);
+
+    background:
+      var(--color-white);
+
+    transform: none;
+  }
+
+  .customer-reviews__nav-button:disabled {
+    opacity: 0.42;
+  }
+}
+
+/* =================================================
+   BELOW 360
+================================================= */
+
+@media (max-width: 359px) {
+  .customer-reviews__heading {
+    left: 16px;
+
+    width:
+      calc(100% - 32px);
+
+    font-size: 22px;
+  }
+
+  .customer-reviews__track {
+    grid-auto-columns:
+      calc(100% - 34px);
+
+    gap: 18px;
+
+    padding:
+      0
+      16px;
+  }
+
+  .testimonial-card {
+    padding: 18px;
+  }
+
+  .testimonial-card__avatar {
+    width: 56px;
+    height: 56px;
+
+    flex-basis: 56px;
+  }
+
+  .testimonial-card__customer {
+    width:
+      calc(100% - 66px);
+  }
+
+  .testimonial-card__review {
+    font-size: 15px;
+  }
+}
+
+/* =================================================
+   TABLET
+   768 — 1023
+
+   Tablet-only alignment pass.
+   Desktop and mobile rules above remain unchanged.
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .customer-reviews {
+    --reviews-gutter: 40px;
+
+    height: 560px;
+  }
+
+  .customer-reviews__inner {
+    height: 560px;
+  }
+
+  .customer-reviews__heading {
+    top: 80px;
+    left: 40px;
+
+    font-size: 32px;
+  }
+
+  .customer-reviews__navigation {
+    top: 66px;
+    right: 40px;
+
+    gap: 10px;
+  }
+
+  .customer-reviews__nav-button {
+    width: 60px;
+    height: 60px;
+
+    flex: 0 0 60px;
+  }
+
+  .customer-reviews__nav-button span {
+    font-size: 20px;
+  }
+
+  .customer-reviews__viewport {
+    top: 180px;
+    height: 278px;
+  }
+
+  .customer-reviews__track {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

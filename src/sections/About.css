@@ -1,0 +1,1061 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600;700&display=swap");
+
+/* =================================================
+   ABOUT SECTION
+================================================= */
+
+.about {
+  --about-font:
+    "Avenir",
+    "Avenir Next",
+    "Mulish",
+    sans-serif;
+
+  width: 100%;
+  height: 832px;
+
+  background: var(--color-gray-light);
+}
+
+.about__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 832px;
+
+  margin: 0 auto;
+}
+
+/* =================================================
+   SHARED DESKTOP CONTENT WIDTH
+================================================= */
+
+.about__header,
+.about__cards,
+.about__stats {
+  width: calc(100% - 240px);
+  max-width: 1200px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* =================================================
+   HEADER
+================================================= */
+
+.about__header {
+  position: absolute;
+  top: 120px;
+}
+
+/* =================================================
+   HEADING
+================================================= */
+
+.about__heading {
+  width: 244px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--about-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* =================================================
+   INTRO
+================================================= */
+
+.about__intro {
+  width: 587px;
+
+  margin: 30px 0 0;
+
+  color: var(--color-text);
+
+  font-family: var(--about-font);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================
+   CARDS ROW
+================================================= */
+
+.about__cards {
+  position: absolute;
+  top: 321px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  column-gap: 20px;
+}
+
+/* =================================================
+   CARD
+================================================= */
+
+.about-card {
+  width: 100%;
+  height: 216px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+
+  border-radius: 8px;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+/* =================================================
+   CARD TOP
+================================================= */
+
+.about-card__top {
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  flex: 0 0 48px;
+}
+
+/* =================================================
+   ICON
+================================================= */
+
+.about-card__icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--color-gray-light);
+}
+
+.about-card__icon img {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  object-fit: contain;
+}
+
+/* =================================================
+   CARD TITLE
+================================================= */
+
+.about-card__title {
+  min-width: 0;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--about-font);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* =================================================
+   CARD DESCRIPTION
+================================================= */
+
+.about-card__description {
+  width: 225px;
+
+  margin: 20px 0 0;
+
+  color: var(--color-text);
+
+  font-family: var(--about-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* =================================================
+   STATS
+================================================= */
+
+.about__stats {
+  position: absolute;
+
+  top: 597px;
+  height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 60px;
+
+  border-radius: 8px;
+
+  background: var(--color-white);
+}
+
+.about__stat-group {
+  display: contents;
+}
+
+.about__stat {
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  flex: 0 0 auto;
+}
+
+/* =================================================
+   STAT VALUE
+================================================= */
+
+.about__stat-value {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-family: var(--about-font);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
+}
+
+/* =================================================
+   STAT LABEL
+================================================= */
+
+.about__stat-label {
+  flex: 0 0 auto;
+
+  color: var(--color-text);
+
+  font-family: var(--about-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.about__stat-group:nth-child(1)
+  .about__stat-label {
+  width: 72px;
+}
+
+.about__stat-group:nth-child(2)
+  .about__stat-label {
+  width: 108px;
+}
+
+.about__stat-group:nth-child(3)
+  .about__stat-label {
+  width: 80px;
+}
+
+.about__stat-group:nth-child(4)
+  .about__stat-label {
+  width: 132px;
+}
+
+/* =================================================
+   DIVIDERS
+================================================= */
+
+.about__stat-divider {
+  width: 1px;
+  height: 48px;
+
+  flex: 0 0 1px;
+
+  background: var(--color-gray);
+}
+
+/* =================================================
+   DESKTOP BELOW 1440
+   1200 — 1439
+================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .about__header,
+  .about__cards,
+  .about__stats {
+    width: calc(100% - 160px);
+    max-width: 1200px;
+  }
+}
+
+/* =================================================
+   LARGE TABLET
+   IPAD PRO
+   1024 — 1199
+
+   80PX GUTTERS
+   2 × 2 CARDS
+   2 × 2 STATS
+================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .about {
+    width: 100%;
+    height: auto;
+
+    background: var(--color-gray-light);
+  }
+
+  .about__inner {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    padding:
+      100px
+      0;
+
+    overflow: visible;
+  }
+
+  .about__header,
+  .about__cards,
+  .about__stats {
+    position: static;
+
+    left: auto;
+
+    width: calc(100% - 160px);
+    max-width: none;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    transform: none;
+  }
+
+  .about__heading {
+    width: auto;
+
+    margin: 0;
+
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .about__intro {
+    width: 100%;
+    max-width: 620px;
+
+    margin:
+      30px
+      0
+      0;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__cards {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 20px;
+
+    margin-top: 60px;
+  }
+
+  .about-card {
+    width: 100%;
+    height: 190px;
+
+    padding: 24px;
+
+    border-radius: 8px;
+  }
+
+  .about-card__top {
+    width: 100%;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    gap: 16px;
+  }
+
+  .about-card__icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+  }
+
+  .about-card__icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-card__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    white-space: normal;
+  }
+
+  .about-card__description {
+    width: 100%;
+
+    margin:
+      16px
+      0
+      0;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stats {
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      30px
+      40px;
+
+    margin-top: 40px;
+
+    padding:
+      32px
+      40px;
+
+    border-radius: 8px;
+
+    background: var(--color-white);
+  }
+
+  .about__stat-group {
+    display: block;
+
+    min-width: 0;
+  }
+
+  .about__stat {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      auto
+      1fr;
+
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .about__stat-value {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    white-space: nowrap;
+  }
+
+  .about__stat-label {
+    width: auto !important;
+
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .about__stat-divider {
+    display: none;
+  }
+}
+
+/* =================================================
+   SMALL TABLET
+   IPAD MINI / SURFACE PRO 7 RANGE
+   768 — 1023
+================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about {
+    width: 100%;
+    height: auto;
+
+    background: var(--color-gray-light);
+  }
+
+  .about__inner {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    padding:
+      80px
+      0
+      96px;
+
+    overflow: visible;
+  }
+
+  .about__header,
+  .about__cards,
+  .about__stats {
+    position: static;
+
+    left: auto;
+
+    width: calc(100% - 80px);
+    max-width: 720px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    transform: none;
+  }
+
+  .about__heading {
+    width: auto;
+
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .about__intro {
+    width: 100%;
+    max-width: 600px;
+
+    margin:
+      20px
+      0
+      0;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__cards {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 20px;
+
+    margin-top: 48px;
+  }
+
+  .about-card {
+    width: 100%;
+    height: 190px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+  }
+
+  .about-card__top {
+    width: 100%;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    gap: 16px;
+  }
+
+  .about-card__icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+  }
+
+  .about-card__icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-card__title {
+    min-width: 0;
+
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: normal;
+  }
+
+  .about-card__description {
+    width: 100%;
+
+    margin:
+      12px
+      0
+      0;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stats {
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      28px
+      20px;
+
+    margin-top: 40px;
+
+    padding:
+      28px
+      32px;
+
+    border-radius: 8px;
+
+    background: var(--color-white);
+  }
+
+  .about__stat-group {
+    display: block;
+
+    min-width: 0;
+  }
+
+  .about__stat {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      auto
+      1fr;
+
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .about__stat-value {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .about__stat-label {
+    width: auto !important;
+
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stat-divider {
+    display: none;
+  }
+}
+
+/* =================================================
+   SURFACE PRO 7 / WIDER SMALL TABLETS
+   900 — 1023
+
+   Match Hero's 40px horizontal gutter instead
+   of being constrained by the 720px iPad Mini cap.
+================================================= */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .about__header,
+  .about__cards,
+  .about__stats {
+    width: calc(100% - 80px);
+    max-width: none;
+  }
+}
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 767px) {
+  .about {
+    width: 100%;
+    height: auto;
+
+    background: var(--color-gray-light);
+  }
+
+  .about__inner {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    padding: 80px 0;
+
+    overflow: visible;
+  }
+
+  .about__header,
+  .about__cards,
+  .about__stats {
+    position: static;
+
+    left: auto;
+
+    width: calc(100% - 40px);
+    max-width: none;
+
+    transform: none;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about__heading {
+    width: auto;
+
+    margin: 0;
+
+    font-family: var(--about-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .about__intro {
+    width: 100%;
+
+    margin: 20px 0 0;
+
+    font-family: var(--about-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 40px;
+  }
+
+  .about-card {
+    width: 100%;
+    height: 158px;
+
+    flex: 0 0 158px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+  }
+
+  .about-card__top {
+    width: 100%;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    gap: 16px;
+  }
+
+  .about-card__icon {
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+  }
+
+  .about-card__icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-card__title {
+    margin: 0;
+
+    font-family: var(--about-font);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  .about-card__description {
+    width: 100%;
+
+    margin: 12px 0 0;
+
+    font-family: var(--about-font);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stats {
+    height: 206px;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    grid-template-rows:
+      repeat(
+        2,
+        73px
+      );
+
+    column-gap: 20px;
+    row-gap: 20px;
+
+    align-items: start;
+
+    margin-top: 60px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+  }
+
+  .about__stat-group {
+    display: block;
+
+    min-width: 0;
+  }
+
+  .about__stat {
+    width: 100%;
+    height: 73px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+  }
+
+  .about__stat-value {
+    margin: 0;
+
+    font-family: var(--about-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stat-label {
+    width: auto !important;
+
+    margin: 0;
+
+    font-family: var(--about-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .about__stat-divider {
+    display: none;
+  }
+}
+
+/* =================================================
+   SURFACE DUO / WIDE PHONE
+   500 — 599
+
+   Keep the existing 2 × 2 stats grid, but place
+   each supporting label to the right of its metric.
+================================================= */
+
+@media (min-width: 500px) and (max-width: 599px) {
+  .about__stat {
+    width: 100%;
+    height: 73px;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  .about__stat-value {
+    align-self: center;
+
+    margin: 0;
+
+    white-space: nowrap;
+  }
+
+  .about__stat-label {
+    width: auto !important;
+
+    align-self: center;
+
+    margin: 0;
+  }
+}
+
+/* =================================================
+   BELOW 360PX
+================================================= */
+
+@media (max-width: 359px) {
+  .about__header,
+  .about__cards,
+  .about__stats {
+    width: calc(100% - 32px);
+  }
+
+  .about-card__title {
+    font-size: 17px;
+  }
+
+  .about__stats {
+    column-gap: 16px;
+  }
+}
