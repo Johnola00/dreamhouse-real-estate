@@ -1,47 +1,115 @@
-# DreamHouse
+# DreamHouse Real Estate
 
-Frontend implementation of a responsive real-estate landing page based on a Figma Community design.
+A responsive frontend implementation of a real estate landing page built from a Figma Community design.
 
-## Design Credit
+The goal of this project was to translate the original desktop and mobile layouts into a working React interface while preserving the visual structure, spacing, typography, and responsive behaviour across different screen sizes.
 
-Original UI design:
-Sergei Evdokimov
+## Live Demo
 
-Figma Community project:
-Real Estate Landing Page
+[View Live Site](https://dreamhouse-realestate.netlify.app/)
 
-Figma source:
-https://www.figma.com/design/FWazaxizfqfk8sVCwndEYs/Real-Estate-Landing-Page--Community-?node-id=0-1&p=f&t=UYRRBFl0dwrdxL1A-0
+## Figma Design
 
-Frontend implementation:
-John Oduntan
+[View the original Figma design](https://www.figma.com/design/FWazaxizfqfk8sVCwndEYs/Real-Estate-Landing-Page--Community-?node-id=0-1&t=I8OMWzn1wTJmOgYX-1)
 
 ## Tech Stack
 
 - React
 - TypeScript
 - Vite
-- Tailwind CSS
+- CSS
+- Git & GitHub
+- Netlify
 
-## Status
+## What I Implemented
 
-Work in progress.
+- Responsive header and navigation
+- Mobile slide-in menu
+- Hero section with property information
+- About section
+- Best Sellers property showcase
+- How We Work section
+- Articles and Tips section with responsive filtering
+- Customer Reviews
+- FAQ section
+- Responsive footer
+- Responsive layouts for mobile, tablet, laptop, and desktop screen sizes
 
-## Local Setup
+## Responsive Work
+
+The interface was tested and refined across a range of viewport sizes, including:
+
+- Mobile devices
+- iPad Mini
+- iPad Air
+- iPad Pro
+- Surface Pro
+- Asus Zenbook Fold
+- Nest Hub
+- Nest Hub Max
+- Desktop displays
+
+The responsive implementation uses dedicated breakpoint behaviour where needed instead of simply scaling the desktop layout down.
+
+## Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── sections/
+├── styles/
+├── App.tsx
+└── main.tsx
+```
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Johnola00/dreamhouse-real-estate.git
+```
+
+Move into the project directory:
+
+```bash
+cd dreamhouse-real-estate
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-## Live Demo
+Create a production build:
 
-To be added.
+```bash
+npm run build
+```
 
-## Screenshots
+## Design Source
 
-To be added.
+The interface was implemented from a Figma Community real estate landing page design.
 
-## Features
+Frontend implementation, responsive behaviour, and interaction work by **John Oduntan**.
 
-To be added.
+## Links
+
+- [Live Demo](https://dreamhouse-realestate.netlify.app/)
+- [Figma Design](https://www.figma.com/design/FWazaxizfqfk8sVCwndEYs/Real-Estate-Landing-Page--Community-?node-id=0-1&t=I8OMWzn1wTJmOgYX-1)
+- [GitHub Repository](https://github.com/Johnola00/dreamhouse-real-estate)
+
+## Author
+
+**John Oduntan**  
+Product / UI/UX Designer & Frontend Builder
+
+- GitHub: [Johnola00](https://github.com/Johnola00)
